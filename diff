@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Poopee ❤️</title>
+
+<style>
+body{
+    margin:0;
+    background:linear-gradient(to bottom,#ff9ecf,#ff6fa5);
+    font-family:sans-serif;
+    text-align:center;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    margin-top:50px;
+}
+
+img, video{
+    width:90%;
+    max-width:400px;
+    border-radius:20px;
+    margin:20px 0;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.heart{
+    position:fixed;
+    bottom:-20px;
+    font-size:20px;
+    animation:float 5s linear infinite;
+}
+
+@keyframes float{
+    to{
+        transform:translateY(-100vh);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>ปูเป้ 💖</h1>
+<h3>15 / 10</h3>
+
+<div class="container">
+
+<img src="74026.jpg">
+<img src="LINE_ALBUM_With Beambooboo_260214_1.jpg">
+<img src="LINE_ALBUM_With Beambooboo_260214_2.jpg">
+<img src="LINE_ALBUM_With Beambooboo_260214_3.jpg">
+
+<video controls>
+<source src="af8a599e-071a-4e64-9617-24ae5ff10276.mp4" type="video/mp4">
+</video>
+
+<audio autoplay loop>
+<source src="444e0a72_025_เพลงรักเพลงแรก_(Blooming)_-_LANDOKMAI.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(Math.random()*3+3)+"s";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },5000);
+}
+
+setInterval(createHeart,500);
+</script>
+
+</body>
+</html>
